@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/sugimotomasaki/.pyenv/versions/work_place/bin/python",
+    "python.pythonPath": "/Users/sugimotomasaki/.pyenv/versions/media/bin/python",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.formatting.provider": "black",
