@@ -2,9 +2,8 @@ def main():
     N, M = map(int, input().split())
     box = []
     for i in range(M):
-        L, R = map(int, input().split())
-        box.append(L)
-        box.append(R)
+        LR = [j for j in map(int, input().split())]
+        box += LR
 
     # print(box)
     num = 0
