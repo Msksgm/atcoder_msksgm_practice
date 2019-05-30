@@ -1,20 +1,17 @@
 def main():
     N = int(input())
-    # S = {}
-    slist = []
-    # P = {}
-    plist = []
+    SP = [list(input().split()) for i in range(N)]
+    for i, SPl in enumerate(SP):
+        SPl.append(i+1)
+        SPl[1] = int(SPl[1])
+    # print(SP)
+    SP.sort(reverse=True, key=lambda x: x[1])
+    # print(SP)
+    SP.sort(key=lambda x: x[0])
+    # print(SP)
 
-    for i in range(1, N+1):
-        s, p = input().split()
-        slist.append(s)
-        plist.append(int(p))
-
-    print(sorted(slist))
-    print(sorted(plist))
-
-    for j, s in enumerate(sorted(slist)):
-        
+    for sp in SP:
+        print(sp[2])
 
 
 if __name__ == "__main__":
