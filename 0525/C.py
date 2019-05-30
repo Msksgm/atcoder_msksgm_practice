@@ -1,25 +1,20 @@
 def main():
     N, M = map(int, input().split())
-    box = []
+
+    L = []
+    R = []
     for i in range(M):
-        LR = [j for j in map(int, input().split())]
-        box += LR
+        l, r = map(int, input().split())
+        L.append(l)
+        R.append(r)
 
-    # print(box)
-    num = 0
-    for j in range(1, N+1):
-        plus = 1
-        # print(j)
-        if plus == 1:
-            for i in range(0, len(box), 2):
-                # print(box[i], box[i+1])
-                if j < box[i] or box[i+1] < j:
-                    plus = 0
-                    break
-
-            num += plus
-
-    print(num)
+    Lout = max(L)
+    Rout = min(R)
+    ans = Rout - Lout+1
+    if ans < 0:
+        print(0)
+    else:
+        print(ans)
 
 
 if __name__ == "__main__":
