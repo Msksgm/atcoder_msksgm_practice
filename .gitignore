@@ -41,5 +41,7 @@ db.sqlite3
 *.js.map
 .DS_Store
 
+# atcoder_msksgm_practice
 kupc
 study
+*_ans.py
