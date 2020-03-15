@@ -1,7 +1,7 @@
 def main():
     s = int(input())
     i = 1
-    save_num = []
+    save_num = [s]
     while True:
         i += 1
 
