@@ -5,7 +5,7 @@ def main():
     if s[a] != '-':
         print('No')
     else:
-        if s[:a].isdigit() and s[b:].isdigit():
+        if s[:a].isdigit() and s[-b:].isdigit():
             print('Yes')
         else:
             print('No')
