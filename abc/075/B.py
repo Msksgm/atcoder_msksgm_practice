@@ -19,7 +19,7 @@ def main():
         ans[x][y] = '#'
 
     for line in ans:
-        print(''.join(map(str, line)))
+        print(*line, sep='')
 
 
 if __name__ == "__main__":
