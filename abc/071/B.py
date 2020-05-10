@@ -1,12 +1,11 @@
 def main():
     s = list(input())
-    s = sorted(set(s))
-    ans = 'None'
-    for i in range(len(s)-1):
-        if ord(s[i])+1 != ord(s[i+1]):
-            ans = chr(ord(s[i])+1)
-            break
-    print(ans)
+    li = list(chr(i)for i in range(97, 123))
+    for i in li:
+        if i not in s:
+            print(i)
+            exit()
+    print('None')
 
 
 if __name__ == "__main__":
