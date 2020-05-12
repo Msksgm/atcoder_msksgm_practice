@@ -1,0 +1,11 @@
+def main():
+    a, b, c = input().split()
+    if a[-1] == b[0] and b[-1] == c[0]:
+        ans = 'YES'
+    else:
+        ans = 'NO'
+    print(ans)
+
+
+if __name__ == "__main__":
+    main()
