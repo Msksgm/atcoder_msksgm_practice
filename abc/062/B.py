@@ -1,7 +1,6 @@
 def main():
     b, w = map(int, input().split())
     image = [list(input()) for _ in range(b)]
-    print(image)
     image.insert(0, ["#"]*w)
     image.append(["#"]*w)
     for im in image:
