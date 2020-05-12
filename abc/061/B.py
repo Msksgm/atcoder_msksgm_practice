@@ -1,12 +1,11 @@
-from collections import Counter
-
-
 def main():
     n, m = map(int, input().split())
     ABs = [list(map(int, input().split())) for _ in range(m)]
-    ABs = [b for a in ABs for b in a]
-    anss = Counter(ABs)
-    for ans in anss.values():
+    anss = [0]*n
+    for AB in ABs:
+        anss[AB[0]-1] += 1
+        anss[AB[1]-1] += 1
+    for ans in anss:
         print(ans)
 
 
