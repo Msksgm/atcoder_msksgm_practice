@@ -1,12 +1,10 @@
-import numpy as np
-
-
 def main():
     n = int(input())
-    As = np.array(list(map(int, input().split())))
+    As = list(map(int, input().split()))
 
     for i in range(n):
-        print(np.sum(As == i+1))
+        ans = As.count(i+1)
+        print(ans)
 
 
 if __name__ == "__main__":
