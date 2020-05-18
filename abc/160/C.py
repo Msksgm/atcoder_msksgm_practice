@@ -5,7 +5,7 @@ def main():
     diffs = [0]*n
     for i in range(n):
         if i == n-1:
-            diffs[i] = k - As[i]
+            diffs[i] = k+As[0] - As[i]
         else:
             diffs[i] = As[i+1] - As[i]
     diffs.remove(max(diffs))
