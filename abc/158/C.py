@@ -1,17 +1,11 @@
 def main():
     a, b = map(int, input().split())
-    a_temp = int(a/0.08)
-    b_temp = int(b/0.1)
-    if max(a_temp, b_temp) == a_temp:
-        if int(a_temp*0.1) == b:
-            ans = a_temp
-        else:
-            ans = -1
-    else:
-        if int(b_temp*0.08) == a:
-            ans = b_temp
-        else:
-            ans = -1
+    ans = -1
+    for i in range(10000, -1, -1):
+        tax1 = int(i*0.08)
+        tax2 = int(i*0.10)
+        if tax1 == a and tax2 == b:
+            ans = i
     print(ans)
 
 
