@@ -2,7 +2,7 @@ from collections import deque
 
 
 def main():
-    s = deque([input()])
+    s = deque(list(input()))
     q = int(input())
     rev = False
     for _ in range(q):
