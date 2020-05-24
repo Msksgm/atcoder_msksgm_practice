@@ -13,7 +13,7 @@ def main():
         if ans[0] == -1:
             ans[0] = 0
     else:
-        if ans[0] == -1:
+        if ans[0] == 0:
             print(-1)
             exit()
 
