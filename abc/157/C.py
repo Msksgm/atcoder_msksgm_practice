@@ -20,7 +20,7 @@ def main():
         if ans[0] == -1:
             ans[0] = 1
 
-        for i in range(n):
+        for i in range(1, n):
             if ans[i] == -1:
                 ans[i] = 0
     print(*ans, sep="")
