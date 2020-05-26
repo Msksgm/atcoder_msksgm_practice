@@ -1,18 +1,18 @@
-from collections import Counter
-
-
 def main():
     n = int(input())
-    ss = [input() for _ in range(n)]
-    max_num = Counter(ss).most_common()[0][1]
-    max_verbs = [Counter(ss).most_common()[0][0]]
-    for i in range(1, len(Counter(ss).most_common())):
-        if Counter(ss).most_common()[i][1] != max_num:
-            break
-        max_verbs.append(Counter(ss).most_common()[i][0])
+    ss = {}
+    max_s = 0
+    for _ in range(n):
+        s = input()
+        if s not in ss:
+            ss[s] = 0
+        else:
+            ss[s] += 1
+            max_s = max(max_s, ss[s])
 
-    max_verbs = sorted(max_verbs)
-    for ans in max_verbs:
+    ss = sorted(ss.items(), key=lambda x: x[0])
+    anss = [s for s, i in ss if i == max_s]
+    for ans in anss:
         print(ans)
 
 
