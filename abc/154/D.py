@@ -6,8 +6,7 @@ def main():
     ps = (np.array(list(map(int, input().split()))) + 1) / 2
 
     ans = -float("inf")
-    for i in range(n-k+1):
-        ans = max(ans, sum(ps[i:i+k]))
+    ans = max([sum(ps[i:i+k]) for i in range(n-k+1)])
     print(ans)
 
 
