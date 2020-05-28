@@ -1,12 +1,13 @@
-import numpy as np
-
-
 def main():
     n, k = map(int, input().split())
-    ps = (np.array(list(map(int, input().split()))) + 1) / 2
+    ps = list(map(int, input().split()))
+    e = [(1+p)/2 for p in ps]
 
-    ans = -float("inf")
-    ans = max([sum(ps[i:i+k]) for i in range(n-k+1)])
+    s = [0]
+    for i in range(n):
+        s.append(s[i]+e[i])
+
+    ans = max([s[i+k] - s[i] for i in range(n-k+1)])
     print(ans)
 
 
