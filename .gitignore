@@ -43,3 +43,6 @@ db.sqlite3
 
 # atcoder_msksgm_practice
 *_ans.py
+*.in
+*.out
+contest.acc.json
